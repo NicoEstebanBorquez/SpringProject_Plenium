@@ -22,7 +22,8 @@ async function guardarNuevaPropiedad(){
         method: 'POST',
         headers: {
         'Accept' : 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.token
         },
         body: JSON.stringify(propiedad)
       });
@@ -37,7 +38,8 @@ async function cargarListaPropiedades(){
         method: 'GET',
         headers: {
         'Accept' : 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.token
         }
     });
 
@@ -68,7 +70,8 @@ async function eliminarPropiedad(id){
                     method: 'DELETE',
                     headers: {
                     'Accept' : 'application/json',
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization': localStorage.token
                     }
                 });
                 //Recargar página

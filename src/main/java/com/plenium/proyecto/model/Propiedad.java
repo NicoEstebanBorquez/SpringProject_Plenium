@@ -1,6 +1,5 @@
 package com.plenium.proyecto.model;
 
-
 import lombok.Getter;
 import lombok.Setter;
 

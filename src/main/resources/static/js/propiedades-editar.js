@@ -8,8 +8,8 @@ async function cargarPropiedadEditar(id) {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'//,
-      //'Authorization': localStorage.token
+      'Content-Type': 'application/json',
+      'Authorization': localStorage.token
     }
   });
   const propiedad = await request.json();
@@ -40,7 +40,8 @@ async function guardarCambios(){
         method: 'POST',
         headers: {
         'Accept' : 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.token
         },
         body: JSON.stringify(propiedad)
       });
