@@ -6,22 +6,14 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "usuarios")
-public class Usuario {
+@Table(name = "clientes")
+public class Cliente {
 
     @Getter @Setter
-    @Column(name = "id_usuario")
+    @Column(name = "id_cliente")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @Getter @Setter
-    @Column(name = "email")
-    private String email;
-
-    @Getter @Setter
-    @Column(name = "contrasena")
-    private String contrasena;
 
     @Getter @Setter
     @Column(name = "nombre")
@@ -36,7 +28,14 @@ public class Usuario {
     private String segundoApellido;
 
     @Getter @Setter
+    @Column(name = "documento_identidad")
+    private String documentoIdentidad;
+
+    @Getter @Setter
+    @Column(name = "email")
+    private String email;
+
+    @Getter @Setter
     @Column(name = "telefono")
     private String telefono;
-
 }

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Plenium - Propiedades</title>
+    <title>Plenium - Inmuebles</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,7 +34,7 @@
         <ul style="background-color: #0b2d4f"; class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a  class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-text mx-3">Plenium</div>
             </a>
 
@@ -51,44 +51,81 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Titulo sección - Propiedades -->
+            <!-- Titulo sección - Inmuebles -->
             <div class="sidebar-heading">
-                Propiedades
+                Inmuebles
             </div>
 
-            <!-- Item Barra Lateral - Cartera de Propiedades -->
-            <li class="nav-item">
-                <a class="nav-link" href="cartera_propiedades.html">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Cartera de Propiedades</span></a>
-            </li>
-            <!-- Item Barra Lateral - Cartera de Propiedades -->
             <li class="nav-item active">
-                <a class="nav-link" href="nueva_propiedad.html">
+                <a class="nav-link" href="cartera_inmuebles.html">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Añadir nueva Propiedad</span></a>
+                    <span>Cartera de Inmuebles</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nuevo_inmueble.html">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Añadir nuevo Inmueble</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="busqueda_avanzada.html">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Búsqueda avanzada</span></a>
             </li>
 
             <!-- Divisor -->
             <hr class="sidebar-divider">
-
             
-            <!-- Titulo sección - Propiedades -->
+            <!-- Titulo sección - Clientes -->
             <div class="sidebar-heading">
                 Clientes
             </div>
-            <!-- Item Barra Lateral - Cartera de Propiedades -->
             <li class="nav-item">
                 <a class="nav-link" href="lista_clientes.html">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Lista de Clientes</span></a>
             </li>
-            <!-- Item Barra Lateral - Cartera de Propiedades -->
             <li class="nav-item">
                 <a class="nav-link" href="nuevo_cliente.html">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Añadir nuevo Cliente</span></a>
             </li>
+
+            <!-- Divisor -->
+            <hr class="sidebar-divider">
+
+            <!-- Titulo sección - Agenda -->
+            <div class="sidebar-heading">
+                Agenda
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="consultar_agenda.html">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Consultar agenda</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nuevo_tour.html">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Añadir Tour</span></a>
+            </li>
+
+            <!-- Divisor -->
+            <hr class="sidebar-divider">
+        
+            <!-- Titulo sección - Tareas -->
+            <div class="sidebar-heading">
+                Tareas
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="consultar_tareas.html">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Consultar tareas</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nueva_tarea.html">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Añadir tarea</span></a>
+            </li>
+
             <!-- Divisor -->
             <hr class="sidebar-divider">
         </ul>
@@ -143,7 +180,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Añadir nueva Propiedad</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Cartera de Inmuebles</h1>
                     <p class="mb-4">Descripción de la tabla.</p>
 
                     <!-- DataTales Example -->
@@ -151,34 +188,31 @@
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Título secundario</h6>
                             <br>
+                            <a href="#" onclick="irNuevoInmueble()" class="btn btn-success btn-icon-split btn-sm"><span class="icon text-white-50"> <i class="fas fa-edit"> </i></span><span class="text">Añadir nuevo inmueble</span></a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <form class="user">
-                                    
-                                    <div class="form-group row">
-                                        <div class="col-sm-4 mb-2 mb-sm-0">
-                                            <input type="text" class="form-control form-control-user" id="txtDenominacion"
-                                                   placeholder="Denominación">
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-4">
-                                            <input type="text" class="form-control form-control-user" id="txtPoblacion"
-                                                   placeholder="Población">
-                                        </div>
-                                        <div class="col-sm-4 mb-3 mb-sm-0">
-                                            <input type="text" class="form-control form-control-user" id="txtProvincia"
-                                                   placeholder="Provincia">
-                                        </div>
-                                    </div>
-
-                                    <a onClick="guardarNuevaPropiedad()" href="#" class="btn btn-primary btn-user ">
-                                        Guardar
-                                    </a>
-                                    <hr>
-                                </form>
+                                <table class="table table-bordered" id="tabla-cartera-inmuebles" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Denominación</th>
+                                            <th>Población</th>
+                                            <th>Provincia</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                               
+                                    <tbody>
+                                        <tr>
+                                            <td>273</td>
+                                            <td>Ático de 2 dormitorios con terraza</td>
+                                            <td>Rincón de la Victoria</td>
+                                            <td>Málaga</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" onclick="irNuevoInmueble()" class="btn btn-success btn-icon-split btn-sm"><span class="icon text-white-50"> <i class="fas fa-edit"> </i></span><span class="text">Añadir nuevo inmueble</span></a>
                             </div>
                         </div>
                     </div>
@@ -246,7 +280,7 @@
     <!-- Page level custom scripts -->
     <!--<script src="js/demo/datatables-demo.js"></script>-->
 
-    <script src="js/propiedades.js"></script>
+    <script src="js/inmuebles.js"></script>
 
 </body>
 
